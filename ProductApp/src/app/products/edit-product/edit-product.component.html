@@ -1,0 +1,74 @@
+<h1 class="text-center">Product Edit for ID : {{editProductById}}</h1>
+<button (click)='goBack()' class="btn btn-info">Back</button>
+<form [formGroup]="editableProductForm" novalidate class="form" (ngSubmit)="update()">
+    <div class="form-group">
+        <label class=" form-check-label" for="Title">Title</label>
+        <input formControlName="title" type="text" class="form-control" />
+    </div>
+    <div *ngIf="editableProductForm.get('title').hasError('required') && editableProductForm.get('title').touched"
+        class="alert alert-danger">
+        <p>!!Title is required!!</p>
+    </div>
+
+    <div class="form-group">
+        <label class=" form-check-label" for="Price">Price</label>
+        <input formControlName="price" type="number" class="form-control" />
+    </div>
+    <div *ngIf="editableProductForm.get('price').hasError('required') && editableProductForm.get('price').touched"
+        class="alert alert-danger">
+        <p>!!Price is required!!</p>
+    </div>
+
+    <div class="form-group">
+        <label class=" form-check-label" for="Color">Color</label>
+        <input formControlName="color" type="text" class="form-control" />
+    </div>
+    <div *ngIf="editableProductForm.get('color').hasError('required') && editableProductForm.get('color').touched"
+        class="alert alert-danger">
+        <p>!!Color is required!!</p>
+    </div>
+
+    <div class="checkbox">
+        <label><input formControlName="inStock" type="checkbox"/>In Stock</label>
+    </div>
+    <div *ngIf="editableProductForm.get('inStock').hasError('required') && editableProductForm.get('inStock').touched"
+        class="alert alert-danger">
+        <p>!!In Stock is required!!</p>
+    </div>
+
+    <div class="form-group">
+        <label class=" form-check-label" for="Details">Product Details</label>
+        <input formControlName="details" type="text" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label class=" form-check-label" for="Quantity">Quantity</label>
+        <input formControlName="quantity" type="number" class="form-control" />
+    </div>
+    <div *ngIf="editableProductForm.get('quantity').hasError('required') && editableProductForm.get('quantity').touched"
+        class="alert alert-danger">
+        <p>!!Quantity is required!!</p>
+    </div>
+
+    <div class="form-group">
+        <label class=" form-check-label" for="Rating">Ratings</label>
+        <input formControlName="rating" type="number" class="form-control" />
+    </div>
+    
+    <div class="form-group">
+        <label class=" form-check-label" for="ExpiryDate">Expiry Date</label>
+        <input formControlName="expiryDate" type="datetime" class="form-control" />
+    </div>
+    
+    <div class="form-group">
+        <label class=" form-check-label" for="ImageUrl">Image URL</label>
+        <input formControlName="imageUrl" type="text" class="form-control" />
+    </div>
+
+    <div class="form-group">
+
+        <button  type="submit" [disabled]='editableProductForm.invalid' class="btn btn-success">Update</button>
+
+        <button (click)='setDefault()' type="button" [disabled]='editableProductForm.invalid' class="btn btn-warning">Default</button>
+    </div>
+</form>

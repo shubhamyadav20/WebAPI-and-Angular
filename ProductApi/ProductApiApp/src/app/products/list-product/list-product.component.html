@@ -1,0 +1,107 @@
+<div class="container">
+    <div class="card">
+        <div>
+            <h1>{{title}}</h1>
+        </div>
+        <p class="text-info">This Angular App is created by {{developerName}}</p>
+    </div>
+    <div class="row">
+        <div class="col-md-2">Search Product: </div>
+        <div class="col-md-6"><input [(ngModel)]='searchText' type='text' class='form-control' />
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="table table-responsive">
+            <table class="table table-striped" *ngIf='products && products.length'>
+                <thead class="thead-dark">
+                    <tr>
+                        <th>
+                            Image
+                        </th>
+                        <th>
+                            ID
+                        </th>
+
+                        <th>
+                            Title
+                        </th>
+
+                        <th>
+                            Price
+                        </th>
+
+                        <th>
+                            Color
+                        </th>
+                        <th>
+                            Details
+                        </th>
+
+                        <th>
+                            Quantity
+                        </th>
+                    
+
+                        <th>
+                            Rating
+                        </th>
+
+                        <th>
+                            Expiry Date
+                        </th>
+                        <th>
+                            In Stock
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let p of products | productfilter: searchText">
+                        <td>
+                            <img [src]="p.ImageUrl" [style.width.px]='imageWidth' [style.margin.px]='imageMargin' alt="{{p.Title}}" />
+                        </td>
+                        <td>
+                            {{p.ProductID}}
+                        </td>
+                        <td class="text-info">
+                            {{p.Title | uppercase}}
+                        </td>
+                        <td>
+                            {{p.Price | currency: 'INR': 'symbol': '1.2-2'}}
+                        </td>
+                        <td>
+                            {{p.Color}}
+                        </td>
+                        <td>
+                            {{p.Details}}
+                        </td>
+                        <td>
+                            {{p.Quantity}}
+                        </td>
+                        <td>
+                            {{p.Rating}}
+                        </td>
+                        <td>
+                            {{p.ExpiryDate}}
+                        </td>
+                      
+                        <td>
+                            <i *ngIf='p.inStock' class="fa fa-check" aria-hidden="true"></i>
+                            <i *ngIf='!p.inStock' class="fa fa-times" aria-hidden="true"></i>
+                        </td>
+                        <td>
+                            <button (click)='editProduct(p.ProductID)' class="btn btn-info"><i class="fa fa-edit"
+                                    aria-hidden="true"></i></button>
+                        </td>
+                        <td>
+                            <button (click)='deleteProduct(p.ProductID)' class="btn btn-danger"><i class="fa fa-trash"
+                                    aria-hidden="true"></i></button>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

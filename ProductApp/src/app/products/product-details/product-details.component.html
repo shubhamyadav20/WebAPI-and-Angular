@@ -1,0 +1,26 @@
+<div class="card text-center">
+    <div class="table table-responsive">
+        <img class="img-fluid" [src]="productDesc.ImageUrl" [style.height.px]='ImageHeight'
+            [style.width.px]='ImageWidth' alt="{{productDesc.Title}}" />
+        <h2>{{productDesc.Title}}</h2>
+        <h5 class="card text-center">{{productDesc.ProductID}}</h5>
+        <p class="card text-center">{{productDesc.Details}}</p>
+        <table class="table table-striped">
+            <thead>
+                <th>Product ID</th>
+                <th>Price</th>
+                <th>Color</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{productDesc.ProductID}}</td>
+                    <td>{{productDesc.Price | currency:"₹"}}</td>
+                    <td>{{productDesc.Color}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div>
+            <button (click)='goBack()' class="btn btn-info">Close</button>
+        </div>
+    </div>
+</div>

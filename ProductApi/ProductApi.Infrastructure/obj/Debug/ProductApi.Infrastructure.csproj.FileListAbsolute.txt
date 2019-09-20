@@ -1,0 +1,14 @@
+C:\Shubham_training\Web API\ProductApi\ProductApi.Infrastructure\bin\Debug\ProductApi.Infrastructure.dll.config
+C:\Shubham_training\Web API\ProductApi\ProductApi.Infrastructure\bin\Debug\ProductApi.Infrastructure.dll
+C:\Shubham_training\Web API\ProductApi\ProductApi.Infrastructure\bin\Debug\ProductApi.Infrastructure.pdb
+C:\Shubham_training\Web API\ProductApi\ProductApi.Infrastructure\bin\Debug\EntityFramework.dll
+C:\Shubham_training\Web API\ProductApi\ProductApi.Infrastructure\bin\Debug\EntityFramework.SqlServer.dll
+C:\Shubham_training\Web API\ProductApi\ProductApi.Infrastructure\bin\Debug\ProductApi.Core.dll
+C:\Shubham_training\Web API\ProductApi\ProductApi.Infrastructure\bin\Debug\ProductApi.Core.pdb
+C:\Shubham_training\Web API\ProductApi\ProductApi.Infrastructure\bin\Debug\EntityFramework.xml
+C:\Shubham_training\Web API\ProductApi\ProductApi.Infrastructure\bin\Debug\EntityFramework.SqlServer.xml
+C:\Shubham_training\Web API\ProductApi\ProductApi.Infrastructure\obj\Debug\ProductApi.Infrastructure.csprojAssemblyReference.cache
+C:\Shubham_training\Web API\ProductApi\ProductApi.Infrastructure\obj\Debug\ProductApi.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Shubham_training\Web API\ProductApi\ProductApi.Infrastructure\obj\Debug\ProductApi.Infrastructure.csproj.CopyComplete
+C:\Shubham_training\Web API\ProductApi\ProductApi.Infrastructure\obj\Debug\ProductApi.Infrastructure.dll
+C:\Shubham_training\Web API\ProductApi\ProductApi.Infrastructure\obj\Debug\ProductApi.Infrastructure.pdb

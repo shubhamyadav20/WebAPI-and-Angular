@@ -1,0 +1,32 @@
+<div class="card text-center">  
+    <div class="table table-responsive">
+        <img class="img-fluid" class="center" [src]="productDelete.ImageUrl" [style.height.px]='ImageHeight' [style.width.px]='ImageWidth' alt="{{productDelete.Title}}" />
+        <h2>{{productDelete.Title}}</h2>
+        <h5>{{productDelete.ProductID}}</h5>
+        <p>{{productDelete.Details}}</p>
+        <table class="table table-striped">
+            <thead>
+                <th>
+                    Product ID
+                </th>
+                <th>
+                    Price
+                </th>
+                <th>
+                    Color
+                </th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{productDelete.ProductID}}</td>
+                    <td>{{productDelete.Price | currency:"₹"}}</td>
+                    <td>{{productDelete.Color}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="form-group">
+            <button (click)='confirmDelete()' class="btn btn-danger" >Confirm DELETE</button>
+            <button (click)='goBack()' class="btn btn-info" >Cancel</button>
+        </div>
+    </div>
+</div>

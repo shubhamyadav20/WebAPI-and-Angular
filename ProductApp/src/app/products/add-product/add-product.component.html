@@ -1,0 +1,64 @@
+<div class="container">
+    <h1>Details for new Product</h1>
+    <form  novalidate #productform='ngForm' class = "form">
+      <div class ="form-group" >
+        <label class=" form-check-label" for="ProductId">Product ID</label>
+        <input name="ProductId" [(ngModel)]='model.ProductID' #id="ngModel" type="text" class="form-control" required/>
+      </div>
+      <div [hidden]="id.valid || id.pristine" class = "alert alert-danger">
+        <p>!!ProductID is required!!</p>
+      </div>
+      <div class = "form-group">
+        <label class=" form-check-label" for="Title">Title</label>
+        <input name="Title" [(ngModel)]='model.Title' #title="ngModel" type="text" class="form-control" required />
+      </div>
+      <div [hidden]="title.valid || title.pristine" class = "alert alert-danger">
+        <p>!!Title is required!!</p>
+      </div>
+      <div class = "form-group">
+        <label class=" form-check-label" for="Price">Price</label>
+        <input name="Price" [(ngModel)]='model.Price' #price="ngModel" type="number" class="form-control" required />
+      </div>
+      <div [hidden]="price.valid || price.pristine" class = "alert alert-danger">
+        <p>!!Price is required!!</p>
+      </div>
+      <div class = "form-group">
+        <label class=" form-check-label" for="Color">Color</label>
+        <input name="Color" [(ngModel)]='model.Color' #color="ngModel" type="text" class="form-control" required />
+      </div>
+      <div [hidden]="color.valid || color.pristine" class = "alert alert-danger">
+        <p>!!Color is required!!</p>
+      </div>
+      <div class = "form-group">
+        <label><input name="InStock" [(ngModel)]='model.InStock' type="checkbox"/> InStock</label>
+      </div>
+      <div class = "form-group">
+        <label class=" form-check-label" for="Details">Details</label>
+        <input name="Details" [(ngModel)]='model.Details'type="text" class="form-control"/>
+      </div>
+      <div class = "form-group">
+        <label class=" form-check-label" for="Quantity">Quantity</label>
+        <input name="Quantity" [(ngModel)]='model.Quantity' #quantity="ngModel" type="number" class="form-control" required />
+      </div>
+      <div [hidden]="quantity.valid || quantity.pristine" class = "alert alert-danger">
+        <p>!!Quantity is required!!</p>
+      </div>
+      <div class = "form-group">
+        <label class=" form-check-label" for="Rating">Rating</label>
+        <input name="Rating" [(ngModel)]='model.Rating' type="number" class="form-control" />
+      </div>
+      <div class = "form-group">
+        <label class=" form-check-label" for="ExpiryDate">ExpiryDate</label>
+        <input name="ExpiryDate" [(ngModel)]='model.ExpiryDate' type="datetime" class="form-control" />
+      </div>
+      <div class = "form-group">
+        <label class=" form-check-label" for="ImageUrl">ImageUrl</label>
+        <input name="ImageUrl" [(ngModel)]='model.ImageUrl' type="text" class="form-control"/>
+      </div>
+      <div>
+        <button (click)='saveProduct()' [disabled]='productform.invalid' class="btn btn-success">Save</button>
+        <button (click)='productform.reset()' class="btn btn-warning">Reset</button>
+      </div>
+    </form>
+</div>
+  

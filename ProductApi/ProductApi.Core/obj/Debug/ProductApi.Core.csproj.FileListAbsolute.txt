@@ -1,0 +1,8 @@
+C:\Shubham_training\Web API\ProductApi\ProductApi.Core\bin\Debug\ProductApi.Core.dll
+C:\Shubham_training\Web API\ProductApi\ProductApi.Core\bin\Debug\ProductApi.Core.pdb
+C:\Shubham_training\Web API\ProductApi\ProductApi.Core\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Shubham_training\Web API\ProductApi\ProductApi.Core\obj\Debug\ProductApi.Core.csproj.CoreCompileInputs.cache
+C:\Shubham_training\Web API\ProductApi\ProductApi.Core\obj\Debug\ProductApi.Core.csproj.CopyComplete
+C:\Shubham_training\Web API\ProductApi\ProductApi.Core\obj\Debug\ProductApi.Core.dll
+C:\Shubham_training\Web API\ProductApi\ProductApi.Core\obj\Debug\ProductApi.Core.pdb
+C:\Shubham_training\Web API\ProductApi\ProductApi.Core\obj\Debug\ProductApi.Core.csprojAssemblyReference.cache
